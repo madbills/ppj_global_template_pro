@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<node>
+		<name><![CDATA[العجينه الأصليه]]></name>
+		<category><![CDATA[Pizza]]></category>
+		<description><![CDATA[عجينة طازجة مصنعة من اجود انواع القمح و ممزوجه بمياه معدنية]]></description>
+	</node>
+	<node>
+		<name><![CDATA[ستافت كراست]]></name>
+		<category><![CDATA[Pizza]]></category>
+		<description><![CDATA[عجينة بابا جونز الأصلية مع أطراف محشوة بالجبن اللذيذ لطعم أغنى حتى النهاية]]></description>
+	</node>
+	<node>
+		<name><![CDATA[الرقيقة و المقرمشة]]></name>
+		<category><![CDATA[Pizza]]></category>
+		<description><![CDATA[عجينة رقيقة و مقرمشة صنعت باللايات المتحدة الأمريكية خصيصاٌ لعملاء بابا جونز.]]></description>
+	</node>
+	<node>
+		<name><![CDATA[الخضراوات الطازجة]]></name>
+		<category><![CDATA[Topping]]></category>
+		<description><![CDATA[أفضل أنواع الخضروات الطازجة من أجود الأراضى]]></description>
+	</node>
+	<node>
+		<name><![CDATA[حبنة]]></name>
+		<category><![CDATA[Topping]]></category>
+		<description><![CDATA[100% جبنة موتزاريلا]]></description>
+	</node>
+	<node>
+		<name><![CDATA[صلصة طبيعية]]></name>
+		<category><![CDATA[Topping]]></category>
+		<description><![CDATA[صلصة طماطم طازجة معبأة بعد الحصاد بست ساعات ممزوجة بالأعشاب الخاصة]]></description>
+	</node>
+	<node>
+		<name><![CDATA[لحوم صافيه]]></name>
+		<category><![CDATA[Topping]]></category>
+		<description><![CDATA[لحوم صافيه 100%]]></description>
+	</node>
+</data>

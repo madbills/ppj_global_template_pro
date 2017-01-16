@@ -1,0 +1,240 @@
+// Typography styles for elements within the main content fo the page
+.inner-content{
+    /* Headings */
+    h1, .h1, 
+    h2, .h2, 
+    h3, .h3, 
+    h4, .h4, 
+    h5, .h5, 
+    h6, .h6{
+        color: @heading-color;
+        font-weight: normal;
+        font-family: @font-knockout-49;
+    } 
+
+    h2, .h2,
+    h3, .h3, 
+    h4, .h4, 
+    h5, .h5, 
+    h6, .h6{
+        margin: @text-margin-large 0 @text-margin-base;
+    }
+
+    h1, .h1{
+        text-transform: uppercase;
+        font-family: @font-knockout-71;
+        font-size: @font-size-h1;
+        line-height: @line-height-h1;
+        margin: 0 0 @text-margin-small;
+    }
+    h2, .h2{
+        font-size: @font-size-h2; 
+        line-height: @line-height-h2;  
+    }
+    h3, .h3{
+        font-size: @font-size-h3;
+        line-height: @line-height-h3;
+    }
+    h4, .h4{
+        font-size: @font-size-h4;
+        line-height: @line-height-h4;
+    }
+    h5, .h5{
+        font-size: @font-size-h5;
+        line-height: @line-height-h5;
+    }
+    h6, .h5{
+        font-size: @font-size-h6;
+        line-height: @line-height-h6;
+    }
+
+    .subhead, 
+    .excerpt{
+        font-family: @font-knockout-71;
+        font-size: @font-size-h4;
+        letter-spacing: 0;
+        line-height: floor(@text-base-line * 3);
+        margin: 0;
+        overflow: visible;
+    }
+
+    /* Standard text */
+
+    font-size: @font-size-base;
+    line-height: @line-height-base;
+    color: @text-base;
+
+    p{
+        margin: 0 0 @text-margin-base;
+        overflow: hidden;
+    }
+    small, .small{
+        font-size: @font-size-small;
+        line-height: @line-height-small;
+    }
+
+    /* Lists */
+    ol, 
+    ul{
+        margin-bottom: @text-margin-base;
+    }
+    ol li{
+        list-style-position: inside;
+    }
+
+    ul{
+        list-style: none;
+        padding-left: 1em;
+        li::before{
+            margin-right: 0.35em;
+            margin-left: -0.7em;
+            content: '•';
+            font-size: 1.5em;
+            position: relative;
+            top: 3px;
+        }
+    }
+    .no-bullets{
+        padding-left: 0;
+        li::before{
+            content: none!important;
+        }
+    }
+
+
+    /* Images */
+    img{
+        max-width: 100%;
+        height: auto;
+        margin-top: @text-margin-large;
+        margin-bottom: @text-margin-large;
+    }
+    .alignleft{
+        clear: left;
+        float: left;
+        margin-right: @grid-gutter;
+    }
+    .alignright{
+        clear: right;
+        float: right;
+        margin-left: @grid-gutter;
+    }
+    .alignnone{
+        display: block;
+    }
+
+    .wp-caption{
+        position: static;
+        margin-bottom: @text-margin-large;
+        img{
+            width: 100%;
+            margin: 0;
+        }
+        .wp-caption-text{
+            margin: 0;
+            font-size: @font-size-small;
+        }
+    }
+
+    .size-large, 
+    .size-full{
+        width: 100%;
+        height: auto;
+    }
+    .size-medium{
+        width: 384px;
+        height: auto;
+    }
+    .size-small,
+    .size-thumbnail{
+        width: 284px;
+        height: auto;
+    }
+
+    /* Titles */
+    .title{
+        margin-bottom: 18px;
+        h1:last-child{
+            margin-bottom: 0;
+        }
+        +img{
+            margin-top: 0;
+        }
+    }
+
+    a{
+        color: @ppj-green-2;
+        &:hover, 
+        &:focus{
+            color: @ppj-hover-green;
+        }
+    }
+
+    .tabs-wrap{
+        h2, .h2, 
+        h3, .h3, 
+        h4, .h4, 
+        h5, .h5, 
+        h6, .h6{
+            text-transform: uppercase;
+        }
+        h2, .h2, 
+        h3, .h3{
+            font-family: @font-knockout-71;
+        }
+    }
+    .box-title{
+        h3, .h3{
+            text-transform: uppercase;
+        }
+    }
+
+}
+
+// Mixin to remove the margin from the bottom of the last element.
+.last-element-no-margin(){
+    >*:last-child{
+        margin-bottom: 0;
+    }
+}
+
+.page-template-default h1, 
+.page-template-default .h1{
+    font-family: @font-knockout-49;
+}
+
+
+// Popover styles.
+.popover{
+    color: #fff;
+    h3.popover-title ,
+    .h3.popover-title{
+        padding: 27px 20px 15px 20px;
+        margin: 0;
+        color: #fff;
+        font-size: 27px;
+        line-height: 30px;
+        text-transform: capitalize;
+        font-family: @font-knockout-49;
+    }
+    .popover-content{
+        padding:20px 17px 20px 20px;
+    }
+    .popover-title + .popover-content{
+        padding-top: 0;
+    }
+
+    // Sidebar header
+    .sidebar {
+        h2 {
+            font-size: 23px;
+            padding-bottom: 9px;
+            margin: 27px 0 0px;
+            text-transform: none;
+        }
+        li {
+            padding-bottom: 9px;
+        }
+    }
+
+}

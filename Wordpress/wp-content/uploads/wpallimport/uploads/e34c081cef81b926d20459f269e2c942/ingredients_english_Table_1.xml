@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<node>
+		<name><![CDATA[Original Crust]]></name>
+		<category><![CDATA[Pizza]]></category>
+		<description><![CDATA[Papa John's original dough is made with a proprietary blend of high-protein flour, which gives our crust a hearty texture. We make our dough with bottled mineral water to ensure product consistency in every bite]]></description>
+	</node>
+	<node>
+		<name><![CDATA[Stuffed Crust]]></name>
+		<category><![CDATA[Pizza]]></category>
+		<description><![CDATA[Our original crust and edges stuffed with melted cheese which makes the experince enjoyable till the end.]]></description>
+	</node>
+	<node>
+		<name><![CDATA[Thin & Crunchy]]></name>
+		<category><![CDATA[Pizza]]></category>
+		<description><![CDATA[Papa's Special thin & crunchy dough made in USA specially for
+ Papa John's customers]]></description>
+	</node>
+	<node>
+		<name><![CDATA[Fresh Vegetables]]></name>
+		<category><![CDATA[Topping]]></category>
+		<description><![CDATA[Upon careful selection, we offer the freshest vegetable toppings such 
+as onions, green peppers, mushrooms, and tomatoes, which we slice fresh in the restaurants]]></description>
+	</node>
+	<node>
+		<name><![CDATA[Cheese]]></name>
+		<category><![CDATA[Topping]]></category>
+		<description><![CDATA[100% Mozzarella Cheese]]></description>
+	</node>
+	<node>
+		<name><![CDATA[Natural Sauce]]></name>
+		<category><![CDATA[Topping]]></category>
+		<description><![CDATA[Our tomates are fresh-packed within an average of 6 hours of harvest to maximize their fresh flavor. Our sauce only contains natural ingredients and savory spices cooked to the ideal thickness.]]></description>
+	</node>
+	<node>
+		<name><![CDATA[Pure Meats]]></name>
+		<category><![CDATA[Topping]]></category>
+		<description><![CDATA[Papa John''s uses 100% real beef & chicken made with no fillers.]]></description>
+	</node>
+</data>

@@ -1,0 +1,138 @@
+/***************************/
+/* Colours                 */
+/***************************/
+.infoWindowContainer .infoWindow h3,
+.prettyMapList .corePrettyStyle{
+    /*Gradient background*/
+    background: #f1f1f1; /* Old browsers */
+
+    /*Rounded corners*/
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+
+    /*Text shadow*/
+
+    border:solid 0px #ccc;
+    color:#7a7a7a;
+}
+
+.prettyMapList .corePrettyStyle a{color:#009873;}
+
+
+.prettyMapList .corePrettyStyle:hover a,
+.prettyMapList a.corePrettyStyle:hover{color:#009873;}
+
+.prettyMapList .corePrettyStyle:active{
+    /*Inset drop-shadow*/
+    -webkit-box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+
+    background-color:#ededed;
+    background-position:0 -10px;
+    background-repeat:repeat-x;
+    border-color:#aaa;
+}
+
+/*Close bar*/
+.prettyMapList .prettyFileBar .bar{
+	background-color:#fbfbfb;
+	border-top:solid 1px #ccc;
+}
+.prettyMapList .prettyFileBar .bar .cross{opacity:0.4;}
+.prettyMapList .prettyFileBar .bar .cross:hover{background-color:#efefef;}
+
+/*InfoWindow*/
+.infoWindowContainer:after {border-top-color: #fff;}
+.infoWindowContainer:before {border-top-color: #ccc;}
+.infoWindowContainer{border:solid 1px #ccc;}
+.infoWindowContainer .infoWindow h3{border-bottom:solid 1px #aaa;}
+
+/* added by red balloon */
+
+@media (min-width: 992px)
+.stores {
+    padding: 21px 0 20px 32px;
+}
+.stores {
+    background-color: #f1f1f1;
+    padding: 20px 0 17px 24px;
+    margin-bottom: 30px;
+}
+
+
+.inner-content .location h4 {margin: 0;}
+
+.loc-time, .loc-phone, .address {display: block; height:22px; min-height: 22px; padding-bottom: 2px; margin-bottom: 12px; clear: left;}
+
+.loc-time::before {
+	content: "";
+	float: left;
+	width: 22px; 
+	height: 22px; 
+	margin-right: 8px;
+	background: url(../images/time.png);
+}
+
+
+.loc-phone::before {
+	content: "";
+	float: left;
+	width: 22px; 
+	height: 22px; 
+	margin-right: 8px;
+	background: url(../images/phone.png);
+}
+
+.address::before {
+	content: "";
+	float: left;
+	width: 22px; 
+	height: 22px; 
+	margin-right: 8px;
+	background: url(../images/point.png);
+}
+
+.prettyMapList .corePrettyStyle {
+    width: calc(50% - 16px);
+    float: left;
+    margin-right: 16px;
+}
+
+.infoWindowContainer .infoWindow h3 {width: 100%;}
+
+/* Filter bar */
+.customCategoryList { width: calc(100% - 16px);}
+
+.prettyMapList .prettyFileBar .btn {
+    width: 100%;
+    background: #fff;
+    border: 1px solid;
+    height: 45px;
+    padding-top: 9px;
+    font-size: 18px;
+    border-radius: 4px;
+}
+
+.prettyMapList .customCategoryList>ul {width: 100%;}
+
+
+/* Category dropdown */
+
+.prettyMapList .customCategoryList .btn::after {
+    content: " ";
+    position: absolute;
+    right: 10px;
+    top: 17px;
+    width: 11px;
+    height: 11px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../images/carrot.png);
+    z-index: 99;
+    pointer-events: none;
+}
+
+.inner-content .prettyMapList ul li::before {display: none;}

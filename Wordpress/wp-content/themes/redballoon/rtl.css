@@ -1,0 +1,223 @@
+/*
+Theme Name: Red Balloon
+Theme URI: [url]
+Author: Red Balloon Design Ltd
+Author URI: http://redballoon.io
+Description: Bespoke blog theme created for papa john's
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags:
+Text Domain: redballooncms
+*/
+
+
+/* Import Bootstrap dist */
+
+@import url("css/lib/bootstrap.min.css");
+@import url("css/style.min.css");
+#nav-collapse li.current_page_item a {
+    background-color: #0F9675;
+    color: #fff;
+}
+
+@media (min-width: 992px) {
+    #nav-collapse li.current_page_item a:after {
+        right: -18px;
+        border-left: 18px solid #0F9675;
+        border-top-width: 32px;
+        border-bottom-width: 31px;
+        content: "";
+    }
+}
+
+#nav-collapse li.current_page_item a {
+    background-color: #0F9675;
+    color: #fff;
+}
+
+@media (min-width: 992px) {
+    #nav-collapse li.current_page_item a:after {
+        right: -18px;
+        border-left: 18px solid #0F9675;
+        border-top-width: 32px;
+        border-bottom-width: 31px;
+        content: "";
+    }
+}
+
+
+/* Amended styles*/
+
+@media (min-width: 992px) {
+    .logo {
+        top: -71px;
+    }
+}
+
+@media (min-width: 992px) {
+    .header .primary-nav {
+        text-align: left;
+        height: 81px;
+    }
+    .omin-bar {
+        height: 100px;
+    }
+}
+
+
+/* Amended styles after backend dev*/
+
+.content-full {
+    padding-top: 72px;
+}
+
+#hero-carousel {
+    margin-top: 45px;
+}
+
+
+/* given -margin for Special offers page. hero carousel should have 36px margin still */
+
+@media (min-width: 992px) {
+    #hero-carousel {
+        margin-bottom: -36px;
+    }
+}
+
+@media (min-width: 992px) {
+    .page-template-page_homepage #hero-carousel {
+        margin-bottom: 36px;
+    }
+}
+
+.content-right {
+    padding-top: 45px;
+}
+
+@media (min-width: 992px) {
+    .secondary-nav {
+        padding-top: 90px;
+    }
+}
+
+.inner-content .title {
+    margin-bottom: 18px;
+}
+
+@media (min-width: 992px) {
+    .header .primary-nav li a,
+    .header .primary-nav li.active a {
+        padding: 12px 12px 21px;
+        font-size: 37px;
+        color: #FFF;
+        letter-spacing: 0;
+        line-height: 36px;
+    }
+}
+
+@media (min-width: 992px) {
+    .logo {
+        left: 50px;
+    }
+}
+
+
+/* Final amended styles */
+
+.miso-wrap h3 {
+    font-weight: 700;
+    font-family: "Knockout 51 A", "Knockout 51 B", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.pop-up-img {
+    padding-right: 16px;
+}
+
+.pop-up-right {
+    width: 55%;
+}
+
+h2 span {
+    color: #AB131B;
+    display: block;
+    margin-bottom: -18px;
+}
+
+.miso-wrap .box-tag {
+    padding: 9px 0 18px;
+}
+
+body {
+    direction: rtl;
+    unicode-bidi: embed;
+}
+
+
+/* RTL styles: */
+
+.inner-content ul.wsp-pages-list {
+    padding-right: 1em;
+}
+
+.inner-content ul.wsp-pages-list li::before {
+    margin-left: .35em;
+    margin-right: -.7em;
+}
+
+.nav-tabs>li {
+    float: right;
+}
+
+.prettyMapList .float_left {
+    float: none;
+}
+
+.feature-secondary-carousel .item-text {
+    text-align: right;
+}
+
+.miso-wrap .product-name {
+    float: right;
+}
+
+.miso-wrap .open-modal {
+    float: left;
+}
+
+.miso-wrap .price {
+    float: left;
+    margin: 0 0 0 8px;
+}
+
+.miso-wrap .box {
+    float: right;
+}
+
+.footer .cnss-social-icon li,
+.footer .emailbutton li {
+    margin-left: 0;
+    margin-right: 12px;
+}
+
+.secondary-nav .btn-toggle-menu i {
+    right: auto;
+    left: 15px;
+}
+
+@media screen and (min-width: 992px) {
+    .rtl-title .title {
+        padding-right: 34%;
+        padding-right: calc(33% + 8px);
+    }
+    .form-group {
+        margin-right: 0;
+        margin-left: 6.25%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .choice-price {
+        float: right;
+    }
+}

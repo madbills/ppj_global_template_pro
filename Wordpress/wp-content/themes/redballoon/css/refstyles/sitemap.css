@@ -1,0 +1,58 @@
+.sitemap-links{
+    margin: 27px -15px 40px -15px;
+}
+.sitemap{
+    padding:27px 0 40px 0; 
+}
+.sitemap-links h2{
+    margin: 0 0 7px 0;
+    font-size: 1.125em;
+}
+.sitemap-links a{
+    color:#009873;
+    font-size: 1em;
+}
+.site-links{
+    margin-bottom: 17px; 
+}
+/*--------------------------------------Tablet css-------------------------------------*/
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .sitemap-links{
+        margin: 40px -15px 30px -15px;
+    }
+    .sitemap-links h2{
+        margin: 0 0 9px 0;
+    }
+    .site-links{
+        margin-bottom: 40px; 
+    }
+    .sitemap-links h2{    
+        font-size: 1.6875em;
+    }
+    .sitemap-links a{
+     font-size: 1.0625em;
+    }
+
+}
+/*--------------------------------------Desktop css-------------------------------------*/
+@media (min-width: 992px) {
+
+    .sitemap-links{
+        margin: 36px -15px 268px -15px;
+    }
+	
+    .site-links h2{
+        margin: 0 0 10px 0;
+    }
+    .site-links{
+        margin-bottom:55px;
+    }
+    .sitemap-links h2{    
+        font-size: 1.6875em;
+    }
+    .sitemap-links a{
+     font-size: 1.0625em;
+    }
+
+}

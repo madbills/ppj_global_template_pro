@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<node>
+		<englishcategory><![CDATA[Pizza]]></englishcategory>
+		<arabiccontent><![CDATA[العجينه الأصليه]]></arabiccontent>
+		<contentelement><![CDATA[Name]]></contentelement>
+		<englishcontent><![CDATA[Original Crust]]></englishcontent>
+	</node>
+	<node>
+		<englishcategory><![CDATA[]]></englishcategory>
+		<arabiccontent><![CDATA[عجينة طازجة مصنعة من اجود انواع القمح و ممزوجه بمياه معدنية]]></arabiccontent>
+		<contentelement><![CDATA[Description]]></contentelement>
+		<englishcontent><![CDATA[Papa John's original dough is made with a proprietary blend of high-protein flour, which gives our crust a hearty texture. We make our dough with bottled mineral water to ensure product consistency in every bite]]></englishcontent>
+	</node>
+	<node>
+		<englishcategory><![CDATA[Pizza]]></englishcategory>
+		<arabiccontent><![CDATA[ستافت كراست]]></arabiccontent>
+		<contentelement><![CDATA[Name]]></contentelement>
+		<englishcontent><![CDATA[Stuffed Crust]]></englishcontent>
+	</node>
+	<node>
+		<englishcategory><![CDATA[]]></englishcategory>
+		<arabiccontent><![CDATA[عجينة بابا جونز الأصلية مع أطراف محشوة بالجبن اللذيذ لطعم أغنى حتى النهاية]]></arabiccontent>
+		<contentelement><![CDATA[Description]]></contentelement>
+		<englishcontent><![CDATA[Our original crust and edges stuffed with melted cheese which makes the experince enjoyable till the end.]]></englishcontent>
+	</node>
+	<node>
+		<englishcategory><![CDATA[Pizza]]></englishcategory>
+		<arabiccontent><![CDATA[الرقيقة و المقرمشة]]></arabiccontent>
+		<contentelement><![CDATA[Name]]></contentelement>
+		<englishcontent><![CDATA[Thin & Crunchy]]></englishcontent>
+	</node>
+	<node>
+		<englishcategory><![CDATA[]]></englishcategory>
+		<arabiccontent><![CDATA[عجينة رقيقة و مقرمشة صنعت باللايات المتحدة الأمريكية خصيصاٌ لعملاء بابا جونز.]]></arabiccontent>
+		<contentelement><![CDATA[Description]]></contentelement>
+		<englishcontent><![CDATA[Papa's Special thin & crunchy dough made in USA specially for
+ Papa John's customers]]></englishcontent>
+	</node>
+	<node>
+		<englishcategory><![CDATA[Topping]]></englishcategory>
+		<arabiccontent><![CDATA[الخضراوات الطازجة]]></arabiccontent>
+		<contentelement><![CDATA[Name]]></contentelement>
+		<englishcontent><![CDATA[Fresh Vegetables]]></englishcontent>
+	</node>
+	<node>
+		<englishcategory><![CDATA[]]></englishcategory>
+		<arabiccontent><![CDATA[أفضل أنواع الخضروات الطازجة من أجود الأراضى]]></arabiccontent>
+		<contentelement><![CDATA[Description]]></contentelement>
+		<englishcontent><![CDATA[Upon careful selection, we offer the freshest vegetable toppings such 
+as onions, green peppers, mushrooms, and tomatoes, which we slice fresh in the restaurants]]></englishcontent>
+	</node>
+	<node>
+		<englishcategory><![CDATA[Topping]]></englishcategory>
+		<arabiccontent><![CDATA[حبنة]]></arabiccontent>
+		<contentelement><![CDATA[Name]]></contentelement>
+		<englishcontent><![CDATA[Cheese]]></englishcontent>
+	</node>
+	<node>
+		<englishcategory><![CDATA[]]></englishcategory>
+		<arabiccontent><![CDATA[100% جبنة موتزاريلا]]></arabiccontent>
+		<contentelement><![CDATA[Description]]></contentelement>
+		<englishcontent><![CDATA[100% Mozzarella Cheese]]></englishcontent>
+	</node>
+	<node>
+		<englishcategory><![CDATA[Topping]]></englishcategory>
+		<arabiccontent><![CDATA[صلصة طبيعية]]></arabiccontent>
+		<contentelement><![CDATA[Name]]></contentelement>
+		<englishcontent><![CDATA[Natural Sauce]]></englishcontent>
+	</node>
+	<node>
+		<englishcategory><![CDATA[]]></englishcategory>
+		<arabiccontent><![CDATA[صلصة طماطم طازجة معبأة بعد الحصاد بست ساعات ممزوجة بالأعشاب الخاصة]]></arabiccontent>
+		<contentelement><![CDATA[Description]]></contentelement>
+		<englishcontent><![CDATA[Our tomates are fresh-packed within an average of 6 hours of harvest to maximize their fresh flavor. Our sauce only contains natural ingredients and savory spices cooked to the ideal thickness.]]></englishcontent>
+	</node>
+	<node>
+		<englishcategory><![CDATA[Topping]]></englishcategory>
+		<arabiccontent><![CDATA[لحوم صافيه]]></arabiccontent>
+		<contentelement><![CDATA[Name]]></contentelement>
+		<englishcontent><![CDATA[Pure Meats]]></englishcontent>
+	</node>
+	<node>
+		<englishcategory><![CDATA[]]></englishcategory>
+		<arabiccontent><![CDATA[لحوم صافيه 100%]]></arabiccontent>
+		<contentelement><![CDATA[Description]]></contentelement>
+		<englishcontent><![CDATA[Papa John''s uses 100% real beef & chicken made with no fillers.]]></englishcontent>
+	</node>
+	<node>
+		<englishcategory><![CDATA[]]></englishcategory>
+		<arabiccontent><![CDATA[]]></arabiccontent>
+		<contentelement><![CDATA[]]></contentelement>
+		<englishcontent><![CDATA[]]></englishcontent>
+	</node>
+	<node>
+		<englishcategory><![CDATA[]]></englishcategory>
+		<arabiccontent><![CDATA[]]></arabiccontent>
+		<contentelement><![CDATA[]]></contentelement>
+		<englishcontent><![CDATA[]]></englishcontent>
+	</node>
+	<node>
+		<englishcategory><![CDATA[]]></englishcategory>
+		<arabiccontent><![CDATA[]]></arabiccontent>
+		<contentelement><![CDATA[]]></contentelement>
+		<englishcontent><![CDATA[]]></englishcontent>
+	</node>
+	<node>
+		<englishcategory><![CDATA[]]></englishcategory>
+		<arabiccontent><![CDATA[]]></arabiccontent>
+		<contentelement><![CDATA[]]></contentelement>
+		<englishcontent><![CDATA[]]></englishcontent>
+	</node>
+	<node>
+		<englishcategory><![CDATA[]]></englishcategory>
+		<arabiccontent><![CDATA[]]></arabiccontent>
+		<contentelement><![CDATA[]]></contentelement>
+		<englishcontent><![CDATA[]]></englishcontent>
+	</node>
+	<node>
+		<englishcategory><![CDATA[]]></englishcategory>
+		<arabiccontent><![CDATA[]]></arabiccontent>
+		<contentelement><![CDATA[]]></contentelement>
+		<englishcontent><![CDATA[]]></englishcontent>
+	</node>
+	<node>
+		<englishcategory><![CDATA[]]></englishcategory>
+		<arabiccontent><![CDATA[]]></arabiccontent>
+		<contentelement><![CDATA[]]></contentelement>
+		<englishcontent><![CDATA[]]></englishcontent>
+	</node>
+	<node>
+		<englishcategory><![CDATA[]]></englishcategory>
+		<arabiccontent><![CDATA[]]></arabiccontent>
+		<contentelement><![CDATA[]]></contentelement>
+		<englishcontent><![CDATA[]]></englishcontent>
+	</node>
+	<node>
+		<englishcategory><![CDATA[]]></englishcategory>
+		<arabiccontent><![CDATA[]]></arabiccontent>
+		<contentelement><![CDATA[]]></contentelement>
+		<englishcontent><![CDATA[]]></englishcontent>
+	</node>
+	<node>
+		<englishcategory><![CDATA[]]></englishcategory>
+		<arabiccontent><![CDATA[]]></arabiccontent>
+		<contentelement><![CDATA[]]></contentelement>
+		<englishcontent><![CDATA[]]></englishcontent>
+	</node>
+</data>

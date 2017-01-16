@@ -1,0 +1,212 @@
+/****location page****/
+#content .locations .container {
+    padding-left: 0;
+}
+
+.location-header{
+    border-bottom: 1px solid #e1e1e1;
+}
+/* .inner-content .location-header h1{
+    color: #000;
+    font-weight: normal;
+    font-size: 1.875em;
+	margin: 16px 0 0 0;
+} */
+
+.location-selection{
+    padding-top:19px; 
+}
+
+.region-body{
+    font-size: 0.875em;
+    display: block;
+}
+.region-body select{
+    border-radius:5px;
+    width:100%;
+    padding: 9px 0 11px 12px;
+    color:#8a8a8a;
+}
+.find-btn button{
+    background-color: #009873;
+    color: #fff;
+    font-size:0.875em; 
+	padding: 8px 12px;
+}
+.region,.city{
+    margin-bottom: 10px;
+}
+.region label,.city label{
+    font-weight: normal;
+}
+.nearest-stores h3{
+    font-size: 1.0625em;
+    line-height: normal;
+    padding-top:20px;
+    margin: 0 0 8px 0;
+}
+.stores{
+    background-color: #f1f1f1;
+    padding:0 0 17px 24px;
+    margin-bottom: 30px;
+}
+.stores h2{
+    padding: 21px 0 24px 0;
+    margin: 0;
+    color:#000;
+    font-size: 1.25em;
+}
+.stores ul{
+    padding-bottom: 13px;
+}
+.stores ul li{
+    padding-bottom: 10px;
+    color:#7a7a7a;
+    font-size: 0.9375em;
+}
+.stores ul li img{
+    padding-right: 9px;
+}
+.stores a{
+    color:#009873;
+    font-size: 0.9375em;
+}
+.stores a img{
+    padding-left: 15px;
+}
+.location-selection select {
+	border-radius: 4px;
+	box-shadow: inset 0px 2px 4px -1px rgba(98, 98, 98, 0.2);
+	border: 1px solid grey;
+}
+.location-selection select:focus {
+    box-shadow: 0px 0px 5px 0px rgba(98, 98, 98, 0.75);
+    outline: none;
+    border-color: #1abc8b; 
+}
+/****************************** Tablet **************************/
+
+/*-------------------------------------------
+   	Tablet Media Query
+-------------------------------------------*/
+
+@media (min-width: 768px) and (max-width: 991px) {
+	/**************** location selection **************/   
+    .location-selection{
+        overflow: hidden;
+		padding-top: 28px;
+    }
+	
+    .region, .city{
+        width:36.73184357541899%;
+        float:left;
+    }
+    .city{
+        width:36.73184357541899%;
+        float: left;
+        margin-left: 4.189944134078212%;
+		padding-right:20px;
+    }
+    .find-btn button {
+	float:left;
+    background-color: #009873;
+    color: #fff;
+    margin-top: 29px;
+    font-size: 1.3125em;
+    padding: 9px 12px;
+	}
+    .stores-list{
+        overflow: hidden;
+    }
+    .location-selection label {
+        font-size: 1.125em;
+    }
+    .region-body{
+    font-size: 1em;
+    
+    }
+    .nearest-stores h3{
+    font-size: 1.125em;
+    margin:0 0 16px;
+    }
+    .stores h2{
+    
+    font-size: 1.375em;
+    }
+    .stores ul li{
+    font-size: 1em;
+    }
+    .stores a{
+     font-size: 1.125em;
+    }
+   
+
+}
+/*-------------------------------------------
+   	Desktop Media Query
+-------------------------------------------*/
+@media (min-width: 992px) {
+/********************** location selection*******************/
+
+    
+    
+    .region{
+        width:25.68359375%;
+        float:left;
+    }
+    .city{
+        width:25.68359375%;
+        float: left;
+        margin-left: 20px;
+		padding-right:20px;
+    }
+    .location-selection{
+        overflow: hidden;
+		padding-top: 36px;
+    }
+	.find-btn button {
+	float:left;
+    background-color: #009873;
+    color: #fff;
+	margin-top:29px;
+	width:14.6484375%;
+    margin-top: 29px;
+    font-size: 1.3125em;
+    padding: 9px 12px;
+	line-height:21px;
+	}
+	.find-btn button:hover {
+    color: white;
+    background-color: #117959;
+    cursor: pointer;
+	}
+    .location-selection label {
+        font-size: 1.125em;
+    }
+    .region-body{
+    font-size: 1em;
+    
+    }
+    .nearest-stores h3{
+    font-size: 1.125em;
+    margin:0 0 16px;
+    }
+    .stores h2{
+    
+    font-size: 1.4375em;
+    }
+    .stores ul li{
+    font-size: 1em;
+    }
+    .stores a{
+   
+    font-size: 1em;
+    }
+   
+   
+}
+@media screen\0 {
+		.find-btn button{
+		margin-top: 27px;
+		}
+}

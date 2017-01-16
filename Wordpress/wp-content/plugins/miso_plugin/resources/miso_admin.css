@@ -1,0 +1,93 @@
+.clearfix::after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
+
+#variations .inside {
+    display: none;
+}
+
+.variations-inner-wrap {
+    padding: 12px;
+}
+
+.add_more_button {
+    margin-top: 12px;
+    display: block;
+    float: left;
+    padding: 8px 12px;
+    background: #0b69b8;
+    color: #fff;
+    cursor: pointer;
+}
+
+.add_more_button span {
+    vertical-align: middle;
+}
+
+.add_more_button::before {
+    content: '+ ';
+    font-size: 1.5em;
+    margin-right: 0.2em;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.remove_button {
+    margin-top: 12px;
+    margin-left: 8px;
+    float: left;
+    padding: 8px 12px;
+    background: #d02727;
+    color: #fff;
+    cursor: pointer;
+}
+
+.remove_button span {
+    vertical-align: middle;
+}
+
+.remove_button::before {
+    content: '− ';
+    font-size: 1.5em;
+    margin-right: 0.2em;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.single_variation {
+    margin-bottom: 24px;
+}
+
+.single_variation>label {
+    display: block;
+    width: 100%;
+    float: left;
+    margin-bottom: 4px;
+}
+
+.single_variation>label>input {
+    width: 100%;
+    margin-top: 4px;
+}
+
+.size-variables>label {
+    width: 40%;
+    float: left;
+}

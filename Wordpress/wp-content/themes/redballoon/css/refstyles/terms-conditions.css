@@ -1,0 +1,57 @@
+.terms-conditions h1{
+	color: #000;
+    font-weight: normal;
+    font-size: 1.5em;
+	margin-top: 23px;
+}
+.terms-conditions ul{
+	margin: 0  0 50px 18px;
+	width:100%;
+}
+.terms-conditions ul li{
+	margin-top:22px;
+    color: #626262;
+    font-size: 0.875em; 
+    line-height: normal;
+	font-weight:normal;
+	list-style-type:disc;
+}
+/****************************** Tablet **************************/
+
+
+@media (min-width: 768px) and (max-width: 991px){
+
+	.terms-conditions h1{
+    color: #000;
+    font-weight: normal;
+    font-size: 2.8125em;
+    margin: 30px 0 0 0;
+    }
+	.terms-conditions ul{
+	margin-bottom:50px;
+	}
+	.terms-conditions ul li{
+	font-size: 0.9375em;
+	margin-top:25px;
+	}
+	
+}
+
+/*-------------------------------------------
+    Desktop Media Query
+-------------------------------------------*/
+
+@media (min-width: 992px) {
+    
+	.terms-conditions h1{
+		font-size: 3.75em;
+		margin-top: 76px;
+    }
+	.terms-conditions ul{
+		margin-bottom:80px;
+	}
+    .terms-conditions ul li {
+		font-size:1.0625em; 
+		margin-top:27px;
+	}
+}	

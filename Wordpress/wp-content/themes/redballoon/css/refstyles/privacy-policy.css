@@ -1,0 +1,78 @@
+.privacy-policy {
+	line-height:normal;
+	margin-bottom:50px;
+}
+
+.privacy-policy  h2{
+    font-size: 1em;
+}
+.privacy-policy  h3{
+	font-size: 0.875em;
+	color:#626262;
+	font-weight:bold;
+	
+}
+.privacy-policy p{
+	font-size: 0.875em;  
+	font-weight:normal;
+	color:#707070;
+	margin: 0;
+}
+.privacy-policy .h2spacing{
+	margin-top: 25px;
+	font-size: 1em;
+}
+.privacy-policy  a{
+	color:#009873;
+}
+
+/****************************** Tablet **************************/
+
+
+@media (min-width: 768px) and (max-width: 991px){
+
+	.privacy-policy {
+		margin-bottom:62px;
+	}
+	
+    .privacy-policy  h2{
+    font-size: 1.376875em;
+	}
+	.privacy-policy  h3{
+		font-size: 1.285em;
+	}
+	.privacy-policy p{
+	font-size: 1em;  
+	}
+	.privacy-policy .h2spacing{
+		font-size: 1.766875em;
+	}
+
+}
+
+/*-------------------------------------------
+    Desktop Media Query
+-------------------------------------------*/
+
+@media (min-width: 992px) {
+    
+	.privacy-policy {
+		margin-bottom:90px;
+	}
+	.privacy-policy p{
+		font-size: 1.0625em; 
+		font-weight:normal;
+	}
+	.privacy-policy .h2spacing{
+		margin-top: 30px;
+	}
+	.privacy-policy  h2{
+    	font-size: 1.375em;
+	}
+	.privacy-policy  h3{
+		font-size: 1.0625em;
+	}
+	.privacy-policy .h2spacing{
+		font-size: 1.4375em;
+	}
+}

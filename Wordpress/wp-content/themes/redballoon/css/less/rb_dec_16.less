@@ -1,0 +1,284 @@
+
+/* Tabs (for about us page) */
+.tabs-wrap, 
+.miso-wrap{
+    .nav-tabs{
+        border-bottom:2px solid @ppj-green;
+        margin: 0 auto 6px;
+    }
+    .nav-tabs>li a {
+        font-family: @font-knockout-49;
+        text-transform: uppercase;
+        border: none;
+        border-bottom: 5px solid #fff;
+        margin-top: 0px;
+        font-size: 37px;
+        line-height: 45px;
+        padding: 0 10px 4px;
+        &:hover{
+            color: @ppj-hover-green;
+        }
+        @media screen and (max-width: @screen-sm-max){
+            font-size: 24px;
+            line-height: 34px;
+            padding: 0px 30px 0px 30px;
+        }
+        @media screen and (max-width: @screen-xs-max){
+            padding: 6px;
+        }
+    }
+    .nav-tabs>li.active a {
+        border: none;
+        border-bottom: 5px solid @ppj-green;
+        margin-top: 0px;
+        color: #2B2B2B;
+        &:hover{
+            color: #2B2B2B;
+        }
+    }
+    
+    .nav-tabs ul li {
+        font-size: 1.5em;
+    }
+
+}
+
+#hero-carousel .carousel-inner>.item a{
+    display: block;
+}
+#hero-carousel .carousel-inner>.item img{
+    width: 100%;
+}
+@media screen and (min-width:@screen-sm-min){
+    #hero-carousel .carousel-inner>.item img + img{
+        display: none;
+    }
+}
+
+/* Miso CSS */
+.miso-inner{
+    .clearfix();
+}
+.miso-wrap{
+    margin-bottom:45px;
+    .box{
+        img{
+            margin: 0;
+        }
+    }
+    .tab-pane>h3{
+        text-transform: uppercase;
+        line-height: @line-height-large;
+        font-size: @font-size-h3;
+    }
+    .box-tag{
+        text-transform: uppercase;
+        padding: 15px 0 27px;
+        font-family: @font-knockout-49;
+        font-size: @font-size-large;
+        color: @text-dark;
+        letter-spacing: 0;
+        line-height: @line-height-large;
+    }
+    .product-name{
+        float: left;
+    }
+    .price{
+        float: right;
+        margin-right: 8px;
+    }
+    .open-modal{
+        display: block;
+        float: right;
+        font-size: 13px;
+    }
+    .tab-pane{
+        div ~ h3{
+            margin-top: 6px;
+        }
+    }
+} 
+
+
+/* Page Default with sidebar */
+.content-right{
+    padding-top: 45px;
+}
+/* Page Default without sidebar */
+.content-full{
+    padding-top: 72px;
+    >*:last-child{
+        margin-bottom: 72px;
+    }
+    >.row{
+        margin-bottom: 0;
+    }
+}
+
+
+
+/* Footer */
+
+.footer .cnss-social-icon,
+.footer .emailbutton{
+    line-height: 0;
+    li{
+        display: block;
+        float: left;
+        margin-left: 12px;
+        a{
+            display: block;
+        }
+    }
+}
+
+
+/* Utilities */ 
+
+/* remove padding from column*/
+.col-no-padding{
+    padding-left:0;
+    padding-right:0;
+}
+@media (min-width: @screen-md-min){
+    .col-no-padding-md{
+        padding-left:0;
+        padding-right:0;
+    }
+}
+.clearfix() {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+.clearfix{
+    .clearfix();
+}
+
+
+#hero-carousel{
+    margin-top: 43px;
+}
+
+#slider{
+    .clearfix();
+    .item{
+        padding: 0 16px;
+        margin: auto;
+        width: 100%;
+        // max-width: 352px;
+        margin-bottom: 12px;
+        img{
+            width: 100%;
+            height: auto;
+        }
+        a:hover h3{
+            color: #0F9675;
+        }
+    }
+    @media screen and (min-width: @screen-sm-min){
+        margin: 0;
+        .item{
+            float: left;
+            max-width: none;
+            width: 50%;
+            padding: 0 12px;
+        }
+    }
+    @media screen and (min-width: @screen-md-min){
+        margin: 0;
+        .item{
+            width: 33.333%;
+            padding: 0 12px;
+        }
+    }
+
+    .owl-item .item{
+        width: 100%;
+    }
+    .owl-wrapper-outer{
+        margin: 0 12px;
+    }
+
+    &.no-owl{
+        text-align: center;
+        font-size: 0;
+        .item{
+            vertical-align: top;
+            display: inline-block;
+            float: none;
+        }
+    }
+}
+
+
+
+// Modal styles:
+/* Modal styles */
+
+.pop-up-img {padding-top: 0;}
+.pop-up-img img {margin: 0; margin-bottom: 18px;}
+
+.pop-up-right {
+	width: 50%;
+}
+
+ h3.modal-title{
+	margin: 9px 0 9px;
+}
+
+.pop-up-right p {
+    font-size: 15px;
+    line-height: 24px;
+}
+
+.modal-body {
+	 padding: 0 0 18px;
+}
+
+.modal-body .original {
+	width: 100%;
+}
+
+.inner-content .modal-body .original h3 {
+	margin-top: 18px;
+	margin-bottom: 9px;
+}
+
+
+.modal-header {
+    padding: 16px 16px 7px 16px !important;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.miso-wrap .open-modal {
+	font-size: 17px;
+}
+
+
+.prettyMapList{
+    .location .description,
+    .mapHolder .infoWindow{ 
+        .address{
+            height: auto;
+        }
+        p{
+            margin: 0;
+        }
+    }
+    @media screen and (min-width:@screen-sm-min){
+        .location:nth-child(2n - 1){
+            clear: left;
+        }
+    }
+    @media screen and (max-width:@screen-xs-max){
+        #ListContainer .location{
+            width: 100%;
+        }
+    }
+}
