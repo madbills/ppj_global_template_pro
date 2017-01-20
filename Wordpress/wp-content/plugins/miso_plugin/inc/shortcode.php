@@ -84,6 +84,7 @@ function miso_plugin_shortcode( $atts, $content = null ){
                                     'include_children' => false
                                     )
                                 ),
+                                'numberposts' => -1,
                                 'exclude' => $exclude,
                                 'post_type' => $type,
                                 'post_status' => 'publish',
@@ -119,6 +120,7 @@ function miso_plugin_shortcode( $atts, $content = null ){
                                 'include_children' => false
                                 )
                             ),
+                        'numberposts' => -1,
                         'exclude' => $exclude,
                         'post_type' => $type,
                         'post_status' => 'publish',
@@ -143,6 +145,7 @@ function miso_plugin_shortcode( $atts, $content = null ){
         $html_list .= '<div class="row">';
         $show_nav = false;
         $posts = get_posts( array(
+            'numberposts' => -1,
             'exclude' => $exclude,
             'post_type' => $type,
             'post_status' => 'publish',
