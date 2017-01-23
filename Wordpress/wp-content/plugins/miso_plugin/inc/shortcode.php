@@ -37,7 +37,7 @@ function miso_plugin_shortcode( $atts, $content = null ){
     
     $taxonomy = $tax_name;
 
-    $current_blog =get_current_blog_id();
+    $current_blog = get_current_blog_id();
 
     // Array of top level terms
     $top_level_terms = get_terms( $taxonomy, 
@@ -84,6 +84,7 @@ function miso_plugin_shortcode( $atts, $content = null ){
                                     'include_children' => false
                                     )
                                 ),
+                                'numberposts' => -1,
                                 'exclude' => $exclude,
                                 'post_type' => $type,
                                 'post_status' => 'publish',
@@ -92,17 +93,29 @@ function miso_plugin_shortcode( $atts, $content = null ){
                             ) );
                             
                             foreach ($posts as $item){
-                                $html_list    .= createItemHtml($item, $bootstrap_columns, $modal_id);
+
                                 $variations = get_post_meta($item->ID, '_variations', true);
-                                $variations = get_post_meta($post->ID, '_variations', true);
-                                if (strlen($variations) === 0 AND $current_blog !== 1){
-                                    $site_1_id = mlp_get_linked_elements($post->ID, '', $current_blog )[0];
-                                    switch_to_blog( $site_1_id );
-                                    $variations = get_post_meta($site_1_id, '_variations', true);
+                                $display_price = get_post_meta($item->ID, '_display_price', true);
+                                $show_image = get_post_meta($item->ID, '_show_image', true);
+
+                                if ($current_blog !== 1){
+                                    $site_1_id = intval(mlp_get_linked_elements($item->ID, '', $current_blog )[1]);
+                                    switch_to_blog( 1 );
+                                    if (strlen($variations) < 1){
+                                        $variations = get_post_meta($site_1_id, '_variations', true);
+                                    }
+                                    if (strlen($display_price) < 1){
+                                        $display_price = get_post_meta($site_1_id, '_display_price', true);
+                                    }
+                                    if (strlen($show_image) < 1){
+                                        $show_image = get_post_meta($site_1_id, '_show_image', true);
+                                    }
                                     restore_current_blog();
                                 }
+
+                                $html_list    .= createItemHtml($item, $bootstrap_columns, $variations ,$modal_id, $display_price);
                                 if (strlen($item->post_content)>0 || strlen($variations)>0){
-                                    $modal_output .= createItemModal($item, $modal_id);
+                                    $modal_output .= createItemModal($item, $modal_id, $variations, $display_price, $show_image );
                                     $modal_id++;
                                 }
                             }
@@ -113,12 +126,14 @@ function miso_plugin_shortcode( $atts, $content = null ){
                     $posts = get_posts( array(
                         'tax_query' => array(
                                 array(
+                                'numberposts' => -1,
                                 'taxonomy' => $taxonomy,
                                 'field' => 'id',
                                 'terms' => $top_term->term_id,
                                 'include_children' => false
                                 )
                             ),
+                        'numberposts' => -1,
                         'exclude' => $exclude,
                         'post_type' => $type,
                         'post_status' => 'publish',
@@ -126,10 +141,26 @@ function miso_plugin_shortcode( $atts, $content = null ){
                         'order' => 'ASC'
                     ) );
                     foreach ($posts as $item){
-                        $html_list    .= createItemHtml($item, $bootstrap_columns, $modal_id);
                         $variations = get_post_meta($item->ID, '_variations', true);
+                        $display_price = get_post_meta($item->ID, '_display_price', true);
+                        $show_image = get_post_meta($item->ID, '_show_image', true);
+                        if ($current_blog !== 1){
+                            $site_1_id = intval(mlp_get_linked_elements($item->ID, '', $current_blog )[1]);
+                            switch_to_blog( 1 );
+                            if (strlen($variations) < 1){
+                                $variations = get_post_meta($site_1_id, '_variations', true);
+                            }
+                            if (strlen($display_price) < 1){
+                                $display_price = get_post_meta($site_1_id, '_display_price', true);
+                            }
+                            if (strlen($show_image) < 1){
+                                $show_image = get_post_meta($site_1_id, '_show_image', true);
+                            }
+                            restore_current_blog();
+                        }
+                        $html_list    .= createItemHtml($item, $bootstrap_columns,$variations, $modal_id, $display_price);
                         if (strlen($item->post_content)>0 || strlen($variations)>0){
-                            $modal_output .= createItemModal($item, $modal_id);
+                            $modal_output .= createItemModal($item, $modal_id, $variations, $display_price, $show_image );
                             $modal_id++;
                         }
                     }
@@ -143,6 +174,7 @@ function miso_plugin_shortcode( $atts, $content = null ){
         $html_list .= '<div class="row">';
         $show_nav = false;
         $posts = get_posts( array(
+            'numberposts' => -1,
             'exclude' => $exclude,
             'post_type' => $type,
             'post_status' => 'publish',
@@ -150,16 +182,26 @@ function miso_plugin_shortcode( $atts, $content = null ){
             'order' => 'ASC'
         ) );
         foreach ($posts as $item){
-            $html_list    .= createItemHtml($item, $bootstrap_columns, $modal_id);
             $variations = get_post_meta($item->ID, '_variations', true);
-            if (strlen($variations) === 0 AND $current_blog !== 1){
-                $site_1_id = mlp_get_linked_elements($item->ID, '', $current_blog )[0];
-                switch_to_blog( $site_1_id );
-                $variations = get_post_meta($site_1_id, '_variations', true);
+            $display_price = get_post_meta($item->ID, '_display_price', true);
+            $show_image = get_post_meta($item->ID, '_show_image', true);
+            if ($current_blog !== 1){
+                $site_1_id = intval(mlp_get_linked_elements($item->ID, '', $current_blog )[1]);
+                switch_to_blog( 1 );
+                if (strlen($variations) < 1){
+                    $variations = get_post_meta($site_1_id, '_variations', true);
+                }
+                if (strlen($display_price) < 1){
+                    $display_price = get_post_meta($site_1_id, '_display_price', true);
+                }
+                if (strlen($show_image) < 1){
+                    $show_image = get_post_meta($site_1_id, '_show_image', true);
+                }
                 restore_current_blog();
             }
+            $html_list    .= createItemHtml($item, $bootstrap_columns, $variations, $modal_id, $display_price);
             if (strlen($item->post_content)>0 || strlen($variations)>0){
-                $modal_output .= createItemModal($item, $modal_id);
+                $modal_output .= createItemModal($item, $modal_id, $variations, $display_price, $show_image );
                 $modal_id++;
             }
         };
@@ -191,51 +233,28 @@ function miso_plugin_shortcode( $atts, $content = null ){
 
 
 
-function createItemHtml( $post, $classes, $modal_number ){
+function createItemHtml( $item, $classes, $variations, $modal_number, $display_price ){
     /**
      * Accepts a post object and a class value and returns the html for the post
      *
-     * @post = wordpress post object
-     * @classes = bootstrap classes
-     *
-     * returns the html output
+     * @param $item = wordpress post object
+     * @param $classes = bootstrap classes
+     * @param $modal_number
+     * @param $display_price
+     * @return the html output
      */
     // Gets the more info text from the blog settings
     $more_info_text = get_option('more-info-text');
 
-    $variations = get_post_meta($post->ID, '_variations', true);
-    if (strlen($variations) === 0 AND $current_blog !== 1){
-        $site_1_id = mlp_get_linked_elements($post->ID, '', $current_blog )[0];
-        switch_to_blog( $site_1_id );
-        $variations = get_post_meta($site_1_id, '_variations', true);
-        restore_current_blog();
-    }
-
-    $display_price = get_post_meta($post->ID, '_display_price', true);
-    if (strlen($display_price) === 0 AND $current_blog !== 1){
-        $site_1_id = mlp_get_linked_elements($post->ID, '', $current_blog )[0];
-        switch_to_blog( $site_1_id );
-        $display_price = get_post_meta($site_1_id, '_display_price', true);
-        restore_current_blog();
-    }
-    $show_image = get_post_meta($post->ID, '_show_image', true);
-    if (strlen($show_image) === 0 AND $current_blog !== 1){
-        $site_1_id = mlp_get_linked_elements($post->ID, '', $current_blog )[0];
-        switch_to_blog( $site_1_id );
-        $show_image = get_post_meta($site_1_id, '_show_image', true);
-        restore_current_blog();
-    }
-
     if ($modal_number == 0){
         $modal_number = '0';
     }
-
     $return = '';
-    $return .= '<div class="box '.$classes.'">';
-    $return .= get_the_post_thumbnail( $post->ID, 'full' );
+    $return .= '<div class="box '.$classes.' col-xs-24">';
+    $return .= get_the_post_thumbnail( $item->ID, 'full' );
     $return .= '<div class="box-tag">'; 
-    $return .= '<div class="product-name">'.$post->post_title.'</div>';
-    if (strlen($post->post_content)>0 || strlen($variations)>0){
+    $return .= '<div class="product-name">'.$item->post_title.'</div>';
+    if (strlen($item->post_content)>0 || strlen($variations)>0){
         $return .= '<a data-toggle="modal" href="#/" data-target="#modal_'.$modal_number.'" class="open-modal">'.$more_info_text.'</a>';
     }
     if (strlen($display_price)>0){
@@ -244,41 +263,18 @@ function createItemHtml( $post, $classes, $modal_number ){
     $return .= '</div></div>';
     return $return;
 }
-function createItemModal( $post, $modal_number ){
+function createItemModal( $item, $modal_number, $variations, $display_price, $show_image ){
     /**
      * Accepts a post object and which modal this is.
      *
      * @post = wordpress post object
-     * @classes = int
+     * @modal_number = int
      *
      * returns the modal html
      */
-    $variations = get_post_meta($post->ID, '_variations', true);
-    if (strlen($variations) === 0 AND $current_blog !== 1){
-        $site_1_id = mlp_get_linked_elements($post->ID, '', $current_blog )[0];
-        switch_to_blog( $site_1_id );
-        $variations = get_post_meta($site_1_id, '_variations', true);
-        restore_current_blog();
-    }
-    $variations = json_decode($variations);
-
-    $display_price = get_post_meta($post->ID, '_display_price', true);
-    if (strlen($display_price) === 0 AND $current_blog !== 1){
-        $site_1_id = mlp_get_linked_elements($post->ID, '', $current_blog )[0];
-        switch_to_blog( $site_1_id );
-        $display_price = get_post_meta($site_1_id, '_display_price', true);
-        restore_current_blog();
-    }
-    $show_image = get_post_meta($post->ID, '_show_image', true);
-    if (strlen($show_image) === 0 AND $current_blog !== 1){
-        $site_1_id = mlp_get_linked_elements($post->ID, '', $current_blog )[0];
-        switch_to_blog( $site_1_id );
-        $show_image = get_post_meta($site_1_id, '_show_image', true);
-        restore_current_blog();
-    }
 
     $return = '';
-    $return .= '<div class="modal" id="modal_'.$modal_number.'" tabindex="-1" role="dialog" aria-labelledby="Product info for '.$post->title.'">';
+    $return .= '<div class="modal" id="modal_'.$modal_number.'" tabindex="-1" role="dialog" aria-labelledby="Product info for '.$item->title.'">';
     $return .= '<div class="vertical-alignment-helper">';
     $return .= '<div class="modal-dialog vertical-align-center" role="document">';
     $return .= '<div class="modal-content">';
@@ -287,7 +283,7 @@ function createItemModal( $post, $modal_number ){
 
     if ($show_image === 'true'){
         $return .= '<div class="pop-up-img">';
-        $image_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
+        $image_url = wp_get_attachment_image_src(get_post_thumbnail_id($item->ID), 'full');
         $image_url = gettype($image_url) ==='array'? $image_url[0] : $image_url;
         $return .= '<img src="'.$image_url.'" class="no-margin" alt="Product Image">';
         $return .= '</div>';
@@ -296,13 +292,14 @@ function createItemModal( $post, $modal_number ){
     } else {
         $return .= '<div class="pop-up-full">';
     }
-    $return .= '<h3 class="modal-title">'.$post->post_title.'</h3>';
-    $return .= apply_filters('the_content', $post->post_content);
+    $return .= '<h3 class="modal-title">'.$item->post_title.'</h3>';
+    $return .= apply_filters('the_content', $item->post_content);
     $return .= '</div>';
 
-    if (count($variations) > 0){
+    $variationsList = json_decode($variations);
+    if (count($variationsList) > 0){
         $return .= '<div class="modal-body">';
-        foreach ($variations as $variation){
+        foreach ($variationsList as $variation){
             $return .= '<div class="original"><h3>'.$variation->variation_name.'</h3>';
             if (isset($variation->sizes) && count($variation->sizes) > 0){
                 foreach ($variation->sizes as $size){

@@ -71,6 +71,40 @@
         line-height: @line-height-large;
         font-size: @font-size-h3;
     }
+    @media screen and (min-width: @screen-sm-min){
+        .tab-pane>.row{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .tab-pane.active{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box{
+            flex: 0 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            >img{
+                flex: 1 0 auto;
+                object-fit: contain;
+                object-position: center;
+            }
+            .object-fit-fallback{
+                flex: 1 0 auto;
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                >img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .box-tag{
+                flex: 0 0 auto;
+            }
+        }   
+    }
     .box-tag{
         text-transform: uppercase;
         padding: 15px 0 27px;
