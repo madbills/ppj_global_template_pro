@@ -87,3 +87,39 @@ $(document).ready(function() {
         $(this).prev().find('i').removeClass('glyphicon-triangle-top').addClass('glyphicon-triangle-bottom');
     });
 });
+
+
+/**
+ * Detects if a css property is supported
+ * Doesn't check for prefixed properties. That needs to be done manually.
+ * @param {String} property - CSS property to check.
+ * @returns {bool} - TRUE if property is supported, FALSE if not.
+ */
+function isPropertySupported(property) {
+    return property in document.body.style;
+}
+
+(function($) {
+    if (!isPropertySupported('object-fit')) {
+        $('body').addClass('no-object-fit');
+        var $objectFitImages = $('img.object-fit, .miso-wrap .box>img');
+        if ($objectFitImages.length > 0) {
+            $objectFitImages.each(function(index, el) {
+                var imgSrc = $(this)[0].src;
+                var obfitPosition = $(this).css('object-position');
+                var obfitSize = $(this).css('object-fit');
+
+                obfitPosition = typeof obfitPosition !== 'undefined' && obfitPosition.length > 1 ? obfitPosition : 'center';
+                obfitSize = typeof obfitSize !== 'undefined' && obfitSize.length > 1 ? obfitSize : 'contain';
+                $(this).wrap('<div class="object-fit-fallback"></div>');
+                $(this).css('visibility', 'hidden');
+                $(this).parent('.object-fit-fallback').css({
+                    'background-image': 'url(' + imgSrc + ')',
+                    'background-size': obfitSize,
+                    'background-position': obfitPosition
+                });
+            });
+        };
+
+    }
+})(jQuery);
