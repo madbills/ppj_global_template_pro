@@ -235,7 +235,7 @@ function save_miso_meta(){
 			if( $post->post_type == 'revision' ) return; // Don't store custom data twice
 
             if (gettype($value) === 'array'){
-                $value = json_encode($value); // If $value is an array, make it a JSON string
+                $value = json_encode($value, JSON_UNESCAPED_UNICODE); // If $value is an array, make it a JSON string
             }
 
 			if(get_post_meta($post->ID, $key, FALSE)) { // If the custom field already has a value
