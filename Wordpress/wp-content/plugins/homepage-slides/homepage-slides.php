@@ -79,6 +79,8 @@ function register_cpt_home_slides() {
 add_action( 'add_meta_boxes', 'add_slides_metaboxes' );
 function add_slides_metaboxes() {
     add_meta_box('slide_attributes', 'Slide Attributes', 'slide_attributes', 'slide', 'normal', 'high');
+	
+    add_meta_box('slides_to_use', 'Carousel slides to show', 'slides_to_use', 'page', 'normal', 'high');
 }
 // Add the meta box to WP Admin
 function slide_attributes() {
