@@ -1,0 +1,14 @@
+store_id,store_name,store_email,new column
+1001,A Store,a_store_1@test.com,a
+1002,A Store 2,a_store_2@test.com,a
+1003,A Store 3,a_store_3@test.com,a
+1004,B Store,b_store_1@test.com,a
+1005,B Store 2,b_store_2@test.com,a
+1006,C Store,c_store_1@test.com,a
+1007,C Store D,c_store_2@test.com,a
+1008,D Store,d_store_1@test.com,a
+1010,E Store,ae_store_1@test.com,a
+1010,F Store,f_store_1@test.com,a
+1011,F Store 2,f_store_2@test.com,a
+1012,F Store 3,f_store_3@test.com,a
+1013,Z Store,z_store_1@test.com,a
